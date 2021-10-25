@@ -70,7 +70,7 @@ public class MemberController {
 		UsernamePasswordAuthenticationToken token = 
 				new UsernamePasswordAuthenticationToken(mid, mpassword);
 		// security core의 Authentication
-		Authentication authentication = authenticationManager.authenticate(token);
+		Authentication authentication = authenticationManager.authenticate(token); // id와 pw 맞는지 확인
 		SecurityContext securityContext = SecurityContextHolder.getContext();
 		securityContext.setAuthentication(authentication);
 		// 응답 내용
